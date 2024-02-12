@@ -1,0 +1,92 @@
+#tab-power-templates {
+	display: none;
+}
+.tab-power {
+	.ui-grid-col {
+		margin-bottom: 0;
+	}
+	td.configuration {
+		padding-top: 5px;
+		text-align: left;
+	}
+	.battery-state {
+		.configuration {
+			border-bottom: 0;
+		}
+	}
+	td.value {
+		text-align: left;
+		width: 20%;
+	}
+	.label {
+		width: 25%;
+	}
+	.number {
+		input {
+			width: 70px;
+			padding: 5px;
+			height: 20px;
+			line-height: 20px;
+			text-align: left;
+			/* border: 1px solid var(--subtleAccent); */
+			border-radius: 5px;
+      color:#7a7a92;
+      background:#dcdce5;
+			margin-right: 11px;
+			font-size: 12px;
+			font-weight: normal;
+		}
+		margin-bottom: 5px;
+		clear: left;
+		padding: 10px;
+    color:#7a7a92;
+		border-bottom: 1px solid var(--subtleAccent);
+		width: 96%;
+		float: left;
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+	.select {
+		margin-bottom: 5px;
+		clear: left;
+		padding: 10px;
+		border-bottom: 1px solid var(--subtleAccent);
+		width: 95%;
+		float: left;
+    color:#7a7a92;
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+	.battery-configuration {
+		select {
+			/*border: 1px solid var(--subtleAccent);*/
+      background:#dcdce5;
+			border-radius: 3px;
+			margin-right: 5px;
+			float: left;
+			width: 150px;
+      color:#7a7a92;
+      padding:5px;
+		}
+	}
+	.require-support {
+		display: none;
+	}
+	.require-upgrade {
+		display: block;
+	}
+}
+.tab-power.supported {
+	.require-support {
+		display: block;
+	}
+	.require-upgrade {
+		display: none;
+	}
+}

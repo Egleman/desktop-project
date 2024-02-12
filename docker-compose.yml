@@ -1,0 +1,20 @@
+version: '3.2'
+networks:
+  server_network:
+    driver: bridge
+services:
+
+  frontend:
+    container_name: vue-frontend
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - '8000:8000'
+    volumes:
+      - type: bind
+        source: ./
+        target: /srv/app
+    tty: true
+    networks:
+      - server_network

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="cTn"/>
+    <link type="text/css" rel="stylesheet" href="../node_modules/jbox/dist/jBox.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./js/libraries/jquery.nouislider.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./js/libraries/jquery.nouislider.pips.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./js/libraries/flightindicators.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/theme.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/main.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/static_tab.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/landing.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/setup.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/help.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/ports.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/configuration.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/pid_tuning.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/receiver.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/servos.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/gps.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/motors.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/led_strip.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/sensors.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/cli.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./tabs/presets/presets.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./tabs/presets/TitlePanel/PresetTitlePanel.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./tabs/presets/DetailedDialog/PresetsDetailedDialog.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./tabs/presets/SourcesDialog/SourcesDialog.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./tabs/presets/SourcesDialog/SourcePanel.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/logging.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/onboard_logging.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/firmware_flasher.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/adjustments.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/auxiliary.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/failsafe.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/osd.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/vtx.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/power.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/transponder.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/privacy_policy.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/tabs/options.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/opensans_webfontkit/fonts.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/dropdown-lists/css/style_lists.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./node_modules/switchery-latest/dist/switchery.min.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/switchery_custom.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./components/MotorOutputReordering/Styles.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./css/select2_custom.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./node_modules/select2/dist/css/select2.min.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./node_modules/multiple-select/dist/multiple-select.min.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="./components/EscDshotDirection/Styles.css" media="all"/>
+
+    <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" media="all" disabled/>
+
+    <script type="module" src="./js/jquery.js"></script>
+    <!-- TODO: probably won't need this here once everything is imported -->
+    <script type="module" src="./js/utils/common.js"></script>
+    <!-- CORDOVA_INCLUDE js/cordova_chromeapi.js -->
+    <!-- CORDOVA_INCLUDE js/cordova_startup.js -->
+    <script type="module" src="./js/main.js"></script>
+
+    <title></title>
+</head>
+<body>
+<!-- AUTHORIZATION -->
+  <div id="winProfile" class="redSquareP">
+    <div id="page" class="pageBase">
+          <div id="title_1" class="title">
+            <div id="title_q1" class="nameTitle">   </div>
+            <div id="title_1name" class="nameTitle">  АВТОРИЗАЦИЯ </div>
+
+            <div id="title_q2" class="nameTitle">
+              <div id="closeButtonTitle" class=" closeTitle">
+                <span class="close" onclick="closeAll();" >&times;</span>
+              </div>
+           </div>
+        </div>
+
+            <div id="content_page_1" class="content_page">
+                <div id="loginId" class="rowField"  style="margin-top:unset;" >
+                  <input id="loginInput" class="loginInput" placeholder="Логин" > </input>
+                </div>
+
+                <div id="passId" class="rowField" style="margin-top:unset;">
+                  <input id="passInput" class="loginInput showp" placeholder="Пароль" > </input>
+                </div>
+
+                <div id="savedataId" class="rowField" style="border-bottom:none;margin:unset;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Запомнить данные</span>
+                    </label>
+                </div>
+
+
+
+                <div id="btn2_1Id" class="rowBtn" style="margin-top:unset;margin-bottom:unset;" >
+
+                  <div id="entry" class="sidBtn orangeColor" style="height:44px;" onclick="closeAll();">
+                    ВОЙТИ
+                  </div>
+                  <div id="reg" class="sidBtn" onclick="entry();" style="height:44px;color:#757575;">
+                    ЗАРЕГИСТРИРОВАТЬСЯ
+                  </div>
+
+                </div>
+
+                <div id="btn2_3Id" class="rowBtn"  style="margin-top:10px;"   >
+
+                  <div id="regGS" class="sidBtn" style="height:60px; background-image:url(../images/icons/gs.svg);background-size:90%;background-position:center;background-repeat:no-repeat;">
+
+                  </div>
+
+                </div>
+
+                <div id="text2_3Id" class="rowText">
+
+                  <span style="height:30px;text-decoration:underline; font-size:14px;color:#757575;">
+                     Забыли пароль?
+                  </span>
+
+                </div>
+
+                <div id="btn2_1Id2" class="rowBtn" style="border-top:1px solid #dcdce5; width:100%;margin-top:unset;margin-bottom:unset;" >
+
+                  <div id="reg" class="sidBtn" style="font-size:16px;color:#757575;">
+                    Использовать демо-версию
+                  </div>
+
+                </div>
+
+
+            </div>
+
+    </div>
+
+
+</div>
+<!-- AUTHORIZATION -->
+
+<!-- CHOICE -->
+  <div id="choiceProfile" style="display:none;" class="redSquareP">
+    <div id="page" class="pageBase">
+          <div id="title_1" class="title">
+            <div id="title_q1" class="nameTitle">   </div>
+            <div id="title_1name" class="nameTitle">  РЕГИСТРАЦИЯ </div>
+
+            <div id="title_q2" class="nameTitle">
+              <div id="closeButtonTitle" class=" closeTitle">
+                <span class="close" onclick="closeAll();" >&times;</span>
+              </div>
+           </div>
+          </div>
+
+
+            <div  id="content_page_2" class="content_page">
+
+
+
+                <div id="text2_3Id" class="rowText">
+
+                  <span style="height:30px;font-size:20px;margin-top:20px; ">
+                    Зарегистрироваться как:
+                  </span>
+
+                </div>
+                <div id="btn2_3Id" class="rowBtn"  style="margin-top:160px;"   >
+
+                  <div id="regGS" class="sidBtn  orangeColor " onclick="toFiz();" style="height:60px;">
+                     Физическоe лицо
+                  </div>
+
+                  <div id="regGS" class="sidBtn   orangeColor  "  onclick="toUr();" style="height:60px;">
+                     Юридическое лицо
+                  </div>
+
+                </div>
+                <!--
+                <div id="btn2_4Id" class="rowBtn">
+
+                      <div id="loginId" class="rowField">
+
+                       <input type="radio" class="radioVideo" onclick="toFiz();" >Физ лицо </input>
+
+                      </div>
+
+                      <div id="loginId" class="rowField">
+                       <input type="radio" class="radioVideo" onclick="toUr();">Юр лицо </input>
+                      </div>
+
+                </div>
+                <div id="btn2_4Id" class="rowBtn">
+
+                  <div id="toFiz" class="sidBtn orangeColor" onclick="toFiz();">
+                     ПРОДОЛЖИTЬ
+                  </div>
+
+
+                </div>
+              -->
+
+
+            </div>
+
+    </div><!-- END page -->
+
+  </div> <!-- END PAGE -->
+<!-- CHOICE -->
+
+
+
+<!-- TOFIZ -->
+  <div id="fizProfile" style="display:none;" class="redSquareP">
+    <div id="page" class="pageBase" style="height:78%;width:80%;">
+          <div id="title_1" class="title">
+            <div id="title_q1" class="nameTitle">   </div>
+            <div id="title_1name" class="nameTitle">  РЕГИСТРАЦИЯ </div>
+
+            <div id="title_q2" class="nameTitle">
+              <div id="closeButtonTitle" class=" closeTitle">
+                <span class="close" onclick="closeAll();" >&times;</span>
+              </div>
+           </div>
+          </div>
+
+
+
+
+
+
+            <div  style="flex-direction:column;"  id="content_page_3" class="content_page">
+              <div style="display:inherit; flex-direction:row;height:70%;width:94%;">
+                <div id="col1" class="rowF">
+
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Фамилия *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Имя *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Отчество *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Серия и номер паспорта *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Кем выдан *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="ИНН *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="СНИЛС *" > </input>
+                  </div>
+
+                </div>
+
+                <div id="col1" class="rowF">
+
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Логин *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Пароль *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Повторите пароль *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Электронная почта *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Номер телефона" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Номер БАС" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Номер пульта" > </input>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+                <div id="savedataId" class="rowField" style="height:4%;border-bottom:none;margin:unset;">
+
+                    <span style="padding-left:62px; font-size:16px;color:#757575;">*Поля обязательные для заполнения</span>
+                </div>
+
+                <div id="savedataId" class="rowField" style="padding-left:62px;height:4%;border-bottom:none;margin:unset;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Я согласен(а) на обработку своих персональных данных</span>
+                    </label>
+                </div>
+
+                <div id="savedataId" class="rowField" style="height:4%;padding-left:62px;border-bottom:none;margin:unset;margin-top:10px;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Я согласен(а) с условиями лицензионного соглашения с условиями лицензионного соглашения</span>
+                     </label>
+                </div>
+
+                <div id="btn2_1Id2" class="rowBtn" style=" width:100%;margin-top:unset;margin-bottom:unset;" >
+
+                  <div id="reg" class="sidBtn orangeColor" style="margin-top:35px;width:300px;font-size:16px;height:50px;" onclick="closeAll();">
+                    ЗАРЕГИСТРИРОВАТЬСЯ
+                  </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!-- END page -->
+
+  </div> <!-- END PAGE -->
+
+<!-- TOFIZ -->
+
+
+
+
+
+<!-- TOUR -->
+  <div id="urProfile" style="display:none;" class="redSquareP">
+    <div id="page" class="pageBase" style="height:88%;width:80%;">
+          <div id="title_1" class="title">
+            <div id="title_q1" class="nameTitle">   </div>
+            <div id="title_1name" class="nameTitle">  РЕГИСТРАЦИЯ </div>
+
+            <div id="title_q2" class="nameTitle">
+              <div id="closeButtonTitle" class=" closeTitle">
+                <span class="close" onclick="closeAll();" >&times;</span>
+              </div>
+           </div>
+          </div>
+
+
+
+
+
+
+            <div  style="flex-direction:column;"  id="content_page_3" class="content_page">
+              <div style="display:inherit; flex-direction:row;height:69%;width:94%;">
+                <div id="col1" class="rowF">
+
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Название организации *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Организационно-правовая форма *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Юридический адрес *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="ОГРН *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="ИНН *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Ф.И.О. регистрирующего лица *" > </input>
+                  </div>
+
+                </div>
+
+                <div id="col1" class="rowF">
+
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Логин *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Пароль *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Повторите пароль *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Электронная почта *" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Номер БАС" > </input>
+                  </div>
+
+                  <div id="fioid" class="rowFieldFio"  style="margin-top:unset;" >
+                    <input id="fioInput" class="loginInput" placeholder="Номер пульта" > </input>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+                <div id="savedataId" class="rowField" style="height:4%;border-bottom:none;margin:unset;">
+
+                    <span style="padding-left:62px; font-size:16px;color:#757575;">*Поля обязательные для заполнения</span>
+                </div>
+
+                <div id="savedataId" class="rowField" style="padding-left:62px;height:4%;border-bottom:none;margin:unset;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Я согласен(а) на обработку своих персональных данных</span>
+                    </label>
+                </div>
+
+                <div id="savedataId" class="rowField" style="height:4%;padding-left:62px;border-bottom:none;margin:unset;margin-top:10px;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Я согласен(а) с условиями лицензионного соглашения с условиями лицензионного соглашения</span>
+                     </label>
+                </div>
+
+                <div id="savedataId" class="rowField" style="height:4%;padding-left:62px;border-bottom:none;margin:unset;margin-top:10px;">
+                    <label>
+                      <input type="checkbox" name="savedataelement" class=" sensors-checkbox " style="vertical-align:middle;" />
+
+                      <span style="padding-left:10px; font-size:16px;color:#757575;">Я подтверждаю, что имею право действовать от имени юридического лица</span>
+                     </label>
+                </div>
+
+                <div id="btn2_1Id2" class="rowBtn" style=" width:100%;margin-top:unset;margin-bottom:unset;" >
+
+                  <div id="reg" class="sidBtn orangeColor" style="width:300px;font-size:16px;height:50px;" onclick="closeAll();">
+                    ЗАРЕГИСТРИРОВАТЬСЯ
+                  </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!-- END page -->
+
+  </div> <!-- END PAGE -->
+
+<!-- TOUR -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+            <div style="display:none;" id="content_page_2" class="content_page">
+
+
+                <div id="loginId" class="rowField">
+                  Зарегистрироваться как:
+                </div>
+
+                <div id="btn2_4Id" class="rowBtn">
+
+                      <div id="loginId" class="rowField">
+
+                       <input type="radio" class="radioVideo" >Физ лицо </input>
+
+                      </div>
+
+                      <div id="loginId" class="rowField">
+                       <input type="radio" class="radioVideo" >Юр лицо </input>
+                      </div>
+
+                </div>
+                <div id="btn2_4Id" class="rowBtn">
+
+                  <div id="toFiz" class="sidBtn orangeColor" onclick="toFiz();">
+                     ПРОДОЛЖИTЬ
+                  </div>
+
+
+                </div>
+
+
+
+            </div>
+
+            <div  style="display:none;flex-direction:column;"  id="content_page_3" class="content_page">
+              <div style="display:inherit; flex-direction:row;">
+                      <div id="col1" class="rowE">
+
+                        <div id="loginId" class="rowField">
+                          Фамилия
+                        </div>
+
+                        <div id="loginId" class="rowField">
+                          Имя
+                        </div>
+                        <div id="loginId" class="rowField">
+                          Отчество
+                        </div>
+                        <div id="loginId" class="rowField">
+                          Серия и номер паспорта
+                        </div>
+
+                        <div id="loginId" class="rowField">
+                          Кем выдан
+                        </div>
+                        <div id="loginId" class="rowField">
+                          ИНН
+                        </div>
+                        <div id="loginId" class="rowField">
+                          СНИЛС
+                        </div>
+
+                      </div>
+
+                      <div id="col1" class="rowE">
+
+                        <div id="loginId" class="rowField">
+                          Логин
+                        </div>
+
+                        <div id="loginId" class="rowField">
+                          Пароль
+                        </div>
+                        <div id="loginId" class="rowField">
+                          Повторите пароль
+                        </div>
+                        <div id="loginId" class="rowField">
+                          Электронная почта
+                        </div>
+
+                        <div id="loginId" class="rowField">
+                           Номер телефона
+                        </div>
+                        <div id="loginId" class="rowField">
+                           Номер БАС
+                        </div>
+                        <div id="loginId" class="rowField">
+                            Номер пульта
+                        </div>
+
+                      </div>
+
+              </div>
+                  <div id="toFiz" class="sidBtn orangeColor" onclick="exitMode();">
+                     ЗАРЕГИСТРИРОВАТЬСЯ
+                  </div>
+
+            </div>
+
+            <div  style="display:none;" id="content_page_4" class="content_page">
+
+            </div>
+
+
+-->
+
+
+
+
+<div id="main-wrapper">
+    <div id="background"></div>
+    <div id="side_menu_swipe"></div>
+    <div class="headerbar">
+        <div id="menu_btn">
+            <em class="fas fa-bars"></em>
+        </div>
+        <betaflight-logo
+            :configurator-version="CONFIGURATOR.getDisplayVersion()"
+            :firmware-version="FC.CONFIG.flightControllerVersion"
+            :firmware-id="FC.CONFIG.flightControllerIdentifier"
+            :hardware-id="FC.CONFIG.hardwareName"
+        ></betaflight-logo>
+
+            <div id="tabs" class="main-tabs">
+                <ul class="mode-disconnected">
+                    <li class="tab_landing" id="tab_landing"><a href="#" i18n="tabLanding" class="tabicon ic_welcome" i18n_title="tabLanding"></a>
+                    </li>
+                    <li class="tab_changelog"><a href="#" class="tabicon ic_change" i18n="tabChangelog"></a></li>
+                    <li class="tab_privacy_policy"><a href="#" class="tabicon ic_privacy" i18n="tabPrivacyPolicy"></a></li>
+                    <li class="tab_help" id="tab_help"><a href="#" i18n="tabHelp" class="tabicon ic_help"
+                                                          i18n_title="tabHelp"></a></li>
+                    <li class="tab_options" id="tab_options"><a href="#" i18n="tabOptions" class="tabicon ic_config" i18n_title="tabOptions"></a>
+                    </li>
+                    <li class="tab_firmware_flasher" id="tabFirmware"><a href="#" i18n="tabFirmwareFlasher" class="tabicon ic_flasher"
+                                                                         i18n_title="tabFirmwareFlasher"></a></li>
+                </ul>
+                <a href="#" class="callback__button">
+                    Обратная связь
+                    <img src="./images/callback/callback-ico.png" alt="callback">
+                </a>
+                <ul style="margin-left:10px;" class="mode-connected">
+                    <li class="tab_setup"><a href="#" i18n="tabSetup" class="tabicon ic_setup" i18n_title="tabSetup"></a></li>
+                    <li class="tab_setup_osd"><a href="#" i18n="tabSetupOSD" class="tabicon ic_setup" i18n_title="tabSetupOSD"></a></li>
+
+                    <li class="tab_ports"><a href="#" i18n="tabPorts" class="tabicon ic_ports" i18n_title="tabPorts"></a></li>
+                    <li class="tab_configuration"><a href="#" i18n="tabConfiguration" class="tabicon ic_config"
+                                                     i18n_title="tabConfiguration"></a></li>
+                    <li class="tab_power"><a href="#" i18n="tabPower" class="tabicon ic_power"
+                                             i18n_title="tabPower"></a></li>
+                    <li class="tab_failsafe"><a href="#" i18n="tabFailsafe" class="tabicon ic_failsafe"
+                                                i18n_title="tabFailsafe"></a></li>
+                    <li class="tab_presets">
+                        <a href="#" i18n="tabPresets" class="tabicon ic_wizzard" i18n_title="tabPresets"></a>
+                    </li>
+                    <li class="tab_pid_tuning"><a href="#" i18n="tabPidTuning" class="tabicon ic_pid"
+                                                  i18n_title="tabPidTuning"></a></li>
+                    <li class="tab_receiver"><a href="#" i18n="tabReceiver" class="tabicon ic_rx" i18n_title="tabReceiver"></a></li>
+                    <li class="tab_auxiliary"><a href="#" i18n="tabAuxiliary" class="tabicon ic_modes" i18n_title="tabAuxiliary"></a>
+                    </li>
+                    <li class="tab_adjustments"><a href="#" i18n="tabAdjustments" class="tabicon ic_adjust"
+                                                   i18n_title="tabAdjustments"></a></li>
+                    <li class="tab_servos"><a href="#" i18n="tabServos" class="tabicon ic_servo" i18n_title="tabServos"></a></li>
+                    <li class="tab_gps"><a href="#" i18n="tabGPS" class="tabicon ic_gps" i18n_title="tabGPS"></a></li>
+                    <li class="tab_motors"><a href="#" i18n="tabMotorTesting" class="tabicon ic_motor" i18n_title="tabMotorTesting"></a>
+                    </li>
+                    <li class="tab_osd"><a href="#" i18n="tabOsd" class="tabicon ic_osd" i18n_title="tabOsd"></a></li>
+                    <li class="tab_vtx"><a href="#" i18n="tabVtx" class="tabicon ic_vtx" i18n_title="tabVtx"></a></li>
+                    <li class="tab_led_strip"><a href="#" i18n="tabLedStrip" class="tabicon ic_led" i18n_title="tabLedStrip"></a>
+                    </li>
+                    <li class="tab_sensors"><a href="#" i18n="tabRawSensorData" class="tabicon ic_sensors"
+                                               i18n_title="tabRawSensorData"></a></li>
+                    <li class="tab_logging"><a href="#" i18n="tabLogging" class="tabicon ic_log"
+                                               i18n_title="tabLogging"></a></li>
+                    <li class="tab_onboard_logging"><a href="#" i18n="tabOnboardLogging" class="tabicon ic_data"
+                                                       i18n_title="tabOnboardLogging"></a></li>
+
+                    <li class="tab_cli">
+                        <a href="#" i18n="tabCLI" class="tabicon ic_cli" i18n_title="tabCLI"></a>
+                    </li>
+
+                    <li class="hider tab_transponder"><a href="#" i18n="tabTransponder" class="tabicon ic_transponder"
+                                                   i18n_title="tabTransponder"></a></li>
+                    <!-- spare icons
+                    <li class=""><a href="#"class="tabicon ic_mission">Mission (spare icon)</a></li>
+                    <li class=""><a href="#"class="tabicon ic_advanced">Advanced (spare icon)</a></li>
+                    <li class=""><a href="#"class="tabicon ic_wizzard">Wizzard (spare icon)</a></li>
+                    -->
+                </ul>
+
+                <!--
+                <ul class="mode-connected mode-connected-cli">
+                    <li class="tab_cli">
+                        <a href="#" i18n="tabCLI" class="tabicon ic_cli" i18n_title="tabCLI"></a>
+                    </li>
+                </ul>
+                -->
+
+
+            </div>
+    </div>
+    <div id="log">
+        <div class="logswitch">
+            <a href="#" id="showlog" i18n="logActionShow"></a>
+        </div>
+        <div id="scrollicon"></div>
+        <div class="wrapper"></div>
+    </div>
+    <div id="tab-content-container">
+
+        <div id="content"></div>
+        <div class="tab_container">
+            <betaflight-logo
+                :configurator-version="CONFIGURATOR.getDisplayVersion()"
+                :firmware-version="FC.CONFIG.flightControllerVersion"
+                :firmware-id="FC.CONFIG.flightControllerIdentifier"
+                :hardware-id="FC.CONFIG.hardwareName"
+            ></betaflight-logo>
+
+        <div id="port-picker">
+
+                    <div id="baudselect">
+                        <div class="dropdown dropdown-dark">
+                            <select class="dropdown-select" id="baud" i18n_title="firmwareFlasherBaudRate">
+                                <option value="1000000">1000000</option>
+                                <option value="500000">500000</option>
+                                <option value="250000">250000</option>
+                                <option value="115200" selected="selected">115200</option>
+                                <option value="57600">57600</option>
+                                <option value="38400">38400</option>
+                                <option value="28800">28800</option>
+                                <option value="19200">19200</option>
+                                <option value="14400">14400</option>
+                                <option value="9600">9600</option>
+                                <option value="4800">4800</option>
+                                <option value="2400">2400</option>
+                                <option value="1200">1200</option>
+                            </select>
+                        </div>
+                    </div>
+            <div id="port-override-option">
+                <label for="port-override">
+                    <span i18n="portOverrideText">Port:</span>
+                    <input id="port-override" type="text" value="/dev/rfcomm0"/>
+                </label>
+            </div>
+            <div id="firmware-virtual-option">
+                <div class="dropdown dropdown-dark">
+                    <select id="firmware-version-dropdown" class="dropdown-select" i18n_title="virtualMSPVersion"></select>
+                </div>
+            </div>
+            <div id="portsinput">
+                <div class="dropdown dropdown-dark">
+                    <select class="dropdown-select" id="port" i18n_title="firmwareFlasherManualPort">
+                        <option value="loading" i18n="serialPortLoading">Loading</option>
+                        <!-- port list gets generated here -->
+                    </select>
+                </div>
+                <div id="auto-connect-and-baud">
+                    <div id="auto-connect-switch" >
+                        <span class="auto_connect" i18n="autoConnect"></span>
+                        <label>
+                            <input class="auto_connect togglemedium" type="checkbox"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left:15px;" class="header-wrapper">
+            <div id="quad-status_wrapper">
+                <battery-icon
+                    :voltage="FC.ANALOG.voltage"
+                    :vbatmincellvoltage="FC.BATTERY_CONFIG.vbatmincellvoltage"
+                    :vbatmaxcellvoltage="FC.BATTERY_CONFIG.vbatmaxcellvoltage"
+                    :vbatwarningcellvoltage="FC.BATTERY_CONFIG.vbatwarningcellvoltage"
+                    :batteryState="FC.BATTERY_STATE?.batteryState"
+                >
+                </battery-icon>
+                <battery-legend
+                    :voltage="FC.ANALOG.voltage"
+                    :vbatmaxcellvoltage="FC.BATTERY_CONFIG.vbatmaxcellvoltage"
+                ></battery-legend>
+                <div class="bottomStatusIcons">
+                    <div class="armedicon cf_tip" i18n_title="mainHelpArmed"></div>
+                    <div class="failsafeicon cf_tip" i18n_title="mainHelpFailsafe"></div>
+                    <div class="linkicon cf_tip" i18n_title="mainHelpLink"></div>
+                </div>
+            </div>
+            <div id="sensor-status" class="sensor_state mode-connected">
+                <ul>
+                    <li class="gyro" i18n_title="sensorStatusGyro">
+                        <div class="gyroicon" i18n="sensorStatusGyroShort"></div>
+                    </li>
+                    <li class="accel" i18n_title="sensorStatusAccel">
+                        <div class="accicon" i18n="sensorStatusAccelShort"></div>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="mag" i18n_title="sensorStatusMag">
+                        <div class="magicon" i18n="sensorStatusMagShort"></div>
+                    </li>
+                    <li class="baro" i18n_title="sensorStatusBaro">
+                        <div class="baroicon" i18n="sensorStatusBaroShort"></div>
+                    </li>
+
+                </ul>
+                <ul>
+                    <li class="gps" i18n_title="sensorStatusGPS">
+                        <div class="gpsicon" i18n="sensorStatusGPSShort"></div>
+                    </li>
+                    <li class="sonar" i18n_title="sensorStatusSonar">
+                        <div class="sonaricon" i18n="sensorStatusSonarShort"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="dataflash_wrapper_global">
+                <div class="noflash_global" align="center" i18n="sensorDataFlashNotFound"></div>
+                <ul class="dataflash-contents_global">
+                    <li class="dataflash-free_global">
+                        <div class="legend" i18n="sensorDataFlashFreeSpace"></div>
+                    </li>
+                </ul>
+                <div id="expertMode" align="center">
+                    <span i18n="expertMode"></span>
+                    <label>
+                        <input name="expertModeCheckbox" class="togglemedium" type="checkbox"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="header_btns" style="border-bottom:1px solid #7e7e95; width:80%;">
+            <div class="connect_controls" id="connectbutton">
+                <div class="connect_b">
+                    <a class="connect disabled" href="#"></a>
+                </div>
+                <div class="connect_state" i18n="connect"></div>
+            </div>
+
+            <div class="open_firmware_flasher" id="flashbutton">
+                <div class="firmware_b">
+                    <a class="flash disabled" href="#"></a>
+                </div>
+                <div class="flash_state" i18n="flashTab"></div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+          <div id="blockForBtn" style="margin-left:12px;justify-content:space-evenly;" class="blockForBtn">
+
+
+            <div class="profileBtnA" id="profileBtn" onclick="openPofile();">
+            </div>
+
+            <div class="profileBtnB" >Профиль</div>
+
+            <div class="exitBtnA"  style="margin-left:11px;">
+            </div>
+
+            <div class="exitBtnB" >Выход</div>
+        </div>
+
+<!--
+        <div id="header_btns">
+            <div class="connect_controls" id="profileBtn" onclick="openPofile();" >
+                <div class="profile_b">
+                    <a class="profile " href="#"></a>
+                </div>
+                <div class="textWHTBTN" >Профиль</div>
+            </div>
+
+            <div class="open_firmware_flasher" id="doorBtn">
+                <div class="door_b">
+                    <a class="door " href="#"></a>
+                </div>
+                <div class="textWHTBTN" >Выход </div>
+            </div>
+        </div>
+-->
+
+
+
+
+        <div id="reveal_btn">
+            <em class="fas fa-ellipsis-v"></em>
+        </div>
+            <div class="clear-both"></div>
+        </div>
+    </div>
+    <status-bar
+            :port-usage-down="PortUsage.port_usage_down"
+            :port-usage-up="PortUsage.port_usage_up"
+            :packet-error="MSP.packet_error"
+            :i2c-error="FC.CONFIG.i2cError"
+            :cycle-time="FC.CONFIG.cycleTime"
+            :cpu-load="FC.CONFIG.cpuload"
+
+            :configurator-version="CONFIGURATOR.getDisplayVersion()"
+            :firmware-version="FC.CONFIG.flightControllerVersion"
+            :firmware-id="FC.CONFIG.flightControllerIdentifier"
+            :hardware-id="FC.CONFIG.hardwareName"
+    ></status-bar>
+    <div id="cache">
+        <div class="data-loading">
+            <p>Waiting for data ...</p>
+        </div>
+    </div>
+</div>
+
+    <dialog class="dialogConfiguratorUpdate">
+        <h3 i18n="noticeTitle"></h3>
+        <div class="content">
+            <div class="dialogConfiguratorUpdate-content" style="margin-top: 10px"></div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="dialogConfiguratorUpdate-websitebtn regular-button" i18n="configuratorUpdateWebsite"></a>
+            <a href="#" class="dialogConfiguratorUpdate-closebtn regular-button" i18n="close"></a>
+        </div>
+    </dialog>
+
+    <dialog class="dialogConnectWarning">
+        <h3 i18n="warningTitle"></h3>
+        <div class="content">
+            <div class="dialogConnectWarning-content" style="margin-top: 10px"></div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="dialogConnectWarning-closebtn regular-button" i18n="close"></a>
+        </div>
+    </dialog>
+
+    <dialog id="dialogResetToCustomDefaults">
+        <h3 i18n="noticeTitle"></h3>
+        <div class="content">
+            <div id="dialogResetToCustomDefaults-content" i18n="resetToCustomDefaultsDialog"></div>
+        </div>
+        <div>
+            <span class="buttons">
+                <a href="#" id="dialogResetToCustomDefaults-acceptbtn" class="regular-button" i18n="resetToCustomDefaultsAccept"></a>
+            </span>
+            <span class="buttons">
+                <a href="#" id="dialogResetToCustomDefaults-cancelbtn" class="regular-button" i18n="cancel"></a>
+            </span>
+        </div>
+    </dialog>
+
+    <dialog id="dialogReportProblems">
+        <h3 i18n="warningTitle"></h3>
+        <div class="content">
+            <div id="dialogReportProblems-header" i18n="reportProblemsDialogHeader"></div>
+            <ul id="dialogReportProblems-list">
+                <!-- List elements added dynamically -->
+            </ul>
+            <div id="dialogReportProblems-footer" i18n="reportProblemsDialogFooter"></div>
+        </div>
+        <div>
+            <span class="buttons">
+                <a href="#" id="dialogReportProblems-closebtn" class="regular-button" i18n="close"></a>
+            </span>
+        </div>
+    </dialog>
+
+    <ul class="hidden"> <!-- Sonar says so -->
+        <li id="dialogReportProblems-listItemTemplate" class="dialogReportProblems-listItem"></li>
+    </ul>
+
+    <dialog class="dialogError">
+        <h3 i18n="errorTitle"></h3>
+        <div class="content">
+            <div class="dialogError-content" style="margin-top: 10px"></div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="dialogError-closebtn regular-button" i18n="close"></a>
+        </div>
+    </dialog>
+
+    <dialog class="dialogYesNo">
+        <h3 class="dialogYesNoTitle"></h3>
+        <div class="dialogYesNoContent"></div>
+        <div class="buttons">
+            <a href="#" class="dialogYesNo-yesButton regular-button"></a>
+            <a href="#" class="dialogYesNo-noButton regular-button"></a>
+        </div>
+    </dialog>
+
+    <dialog class="dialogWait">
+        <div class="data-loading"></div>
+        <h3 class="dialogWaitTitle"></h3>
+        <div class="buttons">
+            <a href="#" class="dialogWait-cancelButton regular-button" i18n="cancel"></a>
+        </div>
+    </dialog>
+
+    <dialog class="dialogInformation">
+        <h3 class="dialogInformationTitle"></h3>
+        <div class="dialogInformationContent"></div>
+        <div class="buttons">
+            <a href="#" class="dialogInformation-confirmButton regular-button"></a>
+        </div>
+    </dialog>
+    <!-- CORDOVA_INCLUDE cordova.js -->
+</body>
+<script>
+  function closeAll(){
+
+    let winProfile = document.getElementById("winProfile") ;
+    winProfile.style.display="none";
+
+    let choiceProfile = document.getElementById("choiceProfile") ;
+    choiceProfile.style.display="none";
+
+    let fizProfile = document.getElementById("fizProfile") ;
+    fizProfile.style.display="none";
+
+
+    let urProfile = document.getElementById("urProfile") ;
+    urProfile.style.display="none";
+
+  }
+
+  function openPofile(){
+    let winProfile = document.getElementById("winProfile") ;
+    winProfile.style.display="flex";
+
+
+
+  }
+  function toFiz(){
+    closeAll();
+
+    let fizProfile = document.getElementById("fizProfile") ;
+    fizProfile.style.display="flex";
+  }
+
+  function toUr(){
+    closeAll();
+
+    let urProfile = document.getElementById("urProfile") ;
+    urProfile.style.display="flex";
+  }
+  function entry(){
+    closeAll();
+
+    let choiceProfile = document.getElementById("choiceProfile") ;
+    choiceProfile.style.display="flex";
+
+//    let content_page_1 = document.getElementById("content_page_1") ;
+//    let content_page_2 = document.getElementById("content_page_2") ;
+//    content_page_1.style.display="none";
+//    content_page_2.style.display="flex";
+//
+//    let title_1name = document.getElementById("title_1name") ;
+//    title_1name.innerText="РЕГИСТРАЦИЯ";
+
+  }
+  function exitMode(){
+
+    let content_page_3 = document.getElementById("content_page_3") ;
+    content_page_3.style.display="none";
+
+    let winProfile = document.getElementById("winProfile") ;
+    winProfile.style.display="none";
+
+  }
+</script>
+</html>
